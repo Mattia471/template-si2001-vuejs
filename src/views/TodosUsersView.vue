@@ -1,7 +1,7 @@
 <template>
   <TableComponent :items="crossedData"
                   :map-items="mapTable"
-                  title-table="Lista Todo"
+                  title-table="Lista Todo - Utenti"
                   :buttons-crud="buttons"
                   :btn-toolbar="btnToolbar"
                   base-lang="todos-users"

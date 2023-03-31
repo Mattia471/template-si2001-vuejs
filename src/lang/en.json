@@ -1,0 +1,23 @@
+{
+  "table": {
+    "users": {
+      "id": "Id",
+      "name": "Name",
+      "username": "Username",
+      "email": "Email"
+    },
+    "todos": {
+      "userId": "User Id",
+      "id": "Id",
+      "title": "Title",
+      "completed": "Completed"
+    },
+    "todos-users": {
+      "username": "Username",
+      "todo": {
+        "title": "Title",
+        "completed": "Completed"
+      }
+    }
+  }
+}

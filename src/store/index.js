@@ -1,14 +1,15 @@
-import { createStore } from 'vuex'
+import {defineStore} from 'pinia'
 
-export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+export const useMainStore = defineStore('main', {
+    state: () => ({
+        loadingTable: false
+    }),
+    getters: {
+        getStatusLoadingTable: (state) => state.loadingTable,
+    },
+    actions: {
+        setLoadingTable(status) {
+            this.loadingTable = status
+        }
+    }
 })

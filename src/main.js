@@ -1,6 +1,30 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import {createPinia} from "pinia/dist/pinia";
+import PrimeVue from 'primevue/config';
+//theme
+import "primevue/resources/themes/lara-light-indigo/theme.css";
+//core
+import "primevue/resources/primevue.min.css";
+//icons
+import "primeicons/primeicons.css";
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import Button from "primevue/button";
+import Toolbar from "primevue/toolbar";
+import TabMenu from "primevue/tabmenu";
+import {i18n} from "@/lang/setup";
 
-createApp(App).use(store).use(router).mount('#app')
+const pinia = createPinia();
+createApp(App)
+    .component('DataTable', DataTable)
+    .component('Column', Column)
+    .component('Button', Button)
+    .component('Toolbar', Toolbar)
+    .component('TabMenu', TabMenu)
+    .use(i18n)
+    .use(PrimeVue)
+    .use(pinia)
+    .use(router)
+    .mount('#app')
